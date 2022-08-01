@@ -1,9 +1,9 @@
 <!doctype html>
-<html><!-- #BeginTemplate "/Templates/Untitled-2.dwt" --><!-- DW6 -->
+<html><!-- InstanceBegin template="/Templates/Untitled-2.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- #BeginEditable "EditRegion2" --><title>申请贷款 - LYKNS</title><!-- #EndEditable -->
+<!-- InstanceBeginEditable name="EditRegion2" --><title>告示牌 - LYKNS</title><!-- InstanceEndEditable -->
 <link href="https://lykns-eow.pages.dev/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://lykns-eow.pages.dev/js/bootstrap.bundle.min.js"></script>
 	<style>
@@ -179,14 +179,84 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-<!--添加代码--><!-- #BeginEditable "EditRegion1" -->
-			<h1 class="text-primary">申请贷款</h1>
-<div class="alert alert-info alert-dismissible fade show">
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    <strong>重要信息!</strong>一些旧的浏览器不支持嵌入框架.你可以尝试独立打开框架中的内容。<a class="btn btn-outline-secondary btn-sm" href="https://forms.office.com/Pages/ResponsePage.aspx?id=G1KQ9WX6qEqaVTQ3DOZpUHLzzfu_kEJBvBxw3qIlFUZURDlBTzVJSzlHWklENlBUSVZDR1pJUUM2VS4u&embed=true">独立打开框架中的内容 &raquo;</a>
-</div>
-<iframe width="100%" height= "1500" src="https://forms.office.com/Pages/ResponsePage.aspx?id=G1KQ9WX6qEqaVTQ3DOZpUHLzzfu_kEJBvBxw3qIlFUZURDlBTzVJSzlHWklENlBUSVZDR1pJUUM2VS4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style=" border: #0078d4 2px solid; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
-<!-- #EndEditable -->
+<!--添加代码--><!-- InstanceBeginEditable name="EditRegion1" --><h1 class="text-primary">告示牌</h1>
+<div id="accordion">
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                公告
+                </a>
+            </div>
+            <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                <div class="card-body">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body">
+                            <h4 class="card-title">电子毕业纪念册</h4>
+                            <p onselectstart="return false;" class="card-text">请原2018级初三七班的老师和同学们及时保存电子毕业纪念册材料，避免过期！</p>
+                            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#myModal">前往下载</button>
+                            <!-- 模态框 -->
+                            <div class="modal fade text-black" id="myModal">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <!-- 模态框头部 -->
+                                        <div class="modal-header">
+                                           <h4 class="modal-title">下载“电子毕业纪念册”</h4>
+                                           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <!-- 模态框内容 -->
+                                        <div class="modal-body">
+                                            <h5 class="modal-title">下载该内容需要进行验证</h5>
+                                            <div class="input-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">验证问题</span>
+                                                    <input type="text" class="form-control" placeholder="初三时，我们的班主任叫什么？" id="input">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn btn-outline-primary" type="button" onclick="btn()">验证下载</button>
+                                                    </span>
+                                                <script>
+                                                    var x=document.getElementById("input");
+                                                    function btn()
+                                                    {
+                                                        if(x.value=="王香玉")
+                                                        {
+                                                            window.location.href='http://27.124.40.96:8080/%E7%94%B5%E5%AD%90%E6%AF%95%E4%B8%9A%E7%BA%AA%E5%BF%B5%E5%86%8C.zip';
+                                                        }
+                                                        else
+                                                        {
+                                                            alert("答案错误。")
+                                                        }
+                                                    }
+                                                </script>
+                                                </div>
+                                            </div><!-- /input-group -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header bg-warning text-white">
+                <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+                声明
+            </a>
+            </div>
+             <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body">
+                            <h4 class="card-title">LYK 网络系统隐私声明</h4>
+                            <p class="card-text"></p>
+                            <a href="https://lykns-eow.pages.dev/Privacy" class="btn btn-warning">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div><!-- InstanceEndEditable -->
       </main>
     </div>
 
@@ -196,4 +266,4 @@
         </div>
     </footer>
 </body>
-<!-- #EndTemplate --></html>
+<!-- InstanceEnd --></html>
