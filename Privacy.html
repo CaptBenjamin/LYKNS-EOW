@@ -1,138 +1,384 @@
 <!doctype html>
-<html><!-- InstanceBegin template="/Templates/Untitled-2.dwt" codeOutsideHTMLIsLocked="false" -->
+<html>
+
 <head>
-	<link rel="shortcut icon" href="favicon.ico">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- InstanceBeginEditable name="EditRegion3" --><meta name="description" content="搜索 LYKNS"><!-- InstanceEndEditable -->
-<link rel="stylesheet" href="/css/site.css" asp-append-version="true" />
-<!-- InstanceBeginEditable name="EditRegion2" --><title>LYK 网络系统隐私政策 - LYKNS</title><!-- InstanceEndEditable -->
-<link href="https://www.lykns.tk/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://www.lykns.tk/js/bootstrap.bundle.min.js"></script>
-	<style>
-      @@keyframes loader {
-    1% {
-        left: -10%;
-        opacity: 1;
-    }
- 
-    60% {
-        left: 110%;
-        opacity: 1;
-    }
- 
-    61% {
-        opacity: 0;
-    }
-}
- 
- 
-#loading {
-    z-index: 1000;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.85);
-    top: 0;
-    left: 0;
-    transition: opacity .3s;
-}
- 
-    #loading span {
-		top: 10px;
-        display: block;
-        bottom: 45%;
-        height: 5px;
-        width: 5px;
-        position: fixed;
-        background: rgb(0,120,212);
-        z-index: 1001;
-        display: inline-block;
-        margin: 0 2px;
-        border-radius: 100%;
-        animation: loader 5s infinite cubic-bezier(0.030, 0.615, 0.995, 0.415);
-        transform: translate(-50%,-50%);
-        opacity: 0;
-    }
- 
-        #loading span:nth-child(1) {
-            animation-delay: 0.5s;
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="搜索 LYKNS">
+    <title>LYK 网络系统隐私政策 - LYKNS</title><!-- InstanceEndEditable -->
+    <link href="https://www.lykns.tk/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://www.lykns.tk/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .loader-wrapper {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 99, 177);
         }
- 
-        #loading span:nth-child(2) {
-            animation-delay: 0.4s;
+
+        .loader html,
+        body,
+        div {
+            margin: 0;
+            padding: 0;
         }
- 
-        #loading span:nth-child(3) {
-            animation-delay: 0.3s;
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
         }
- 
-        #loading span:nth-child(4) {
-            animation-delay: 0.2s;
+
+        .loading {
+            width: 100%;
+            height: 100%;
+            position: relative;
         }
- 
-        #loading span:nth-child(5) {
-            animation-delay: 0.1s;
+
+        .loading i {
+            margin: auto;
+            position: absolute;
+            top: calc(50% - 40px);
+            left: calc(50% - 40px);
+            width: 80px;
+            height: 80px;
+            display: block;
         }
- 
-        #loading span:nth-child(6) {
-            animation-delay: 0;
+
+        .loading span {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
         }
-        a{TEXT-DECORATION:none;}
-        a:link {none;}
-        a:visited {none;}
-        a:hover {none;}
-</style>
+
+        .loading span:after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 10px;
+            height: 10px;
+            background: var(--main, rgb(255, 255, 255));
+            border-radius: 50%;
+        }
+
+        .loading span:nth-child(1) {
+            animation: i1 5.5s 0.2s infinite;
+        }
+
+        .loading span:nth-child(2) {
+            animation: i2 5.5s 0.4s infinite;
+        }
+
+        .loading span:nth-child(3) {
+            animation: i3 5.5s 0.6s infinite;
+        }
+
+        .loading span:nth-child(4) {
+            animation: i4 5.5s 0.8s infinite;
+        }
+
+        .loading span:nth-child(5) {
+            animation: i5 5.5s 1s infinite;
+        }
+
+        .loading span:nth-child(6) {
+            animation: i6 5.5s 1.2s infinite;
+        }
+
+        @keyframes i1 {
+            0% {
+                opacity: 1;
+                transform: rotate(190deg);
+                animation-timing-function: cubic-bezier(0.29, 0.44, 0.32, 0.74);
+            }
+
+            7% {
+                opacity: 1;
+                transform: rotate(300deg);
+                animation-timing-function: linear;
+            }
+
+            30% {
+                opacity: 1;
+                transform: rotate(450deg);
+                animation-timing-function: cubic-bezier(0.53, 0.27, 0.37, 0.81);
+            }
+
+            39% {
+                opacity: 1;
+                transform: rotate(645deg);
+                animation-timing-function: linear;
+            }
+
+            63% {
+                opacity: 1;
+                transform: rotate(800deg);
+                animation-timing-function: cubic-bezier(0.5, 0.32, 0.82, 0.54);
+            }
+
+            68% {
+                opacity: 1;
+                transform: rotate(920deg);
+                animation-timing-function: ease-in;
+            }
+
+            69% {
+                opacity: 0;
+                transform: rotate(930deg);
+            }
+        }
+
+        @keyframes i2 {
+            0% {
+                opacity: 1;
+                transform: rotate(180deg);
+                animation-timing-function: cubic-bezier(0.29, 0.44, 0.32, 0.74);
+            }
+
+            7% {
+                opacity: 1;
+                transform: rotate(300deg);
+                animation-timing-function: linear;
+            }
+
+            30% {
+                opacity: 1;
+                transform: rotate(450deg);
+                animation-timing-function: cubic-bezier(0.53, 0.27, 0.37, 0.81);
+            }
+
+            39% {
+                opacity: 1;
+                transform: rotate(645deg);
+                animation-timing-function: linear;
+            }
+
+            63% {
+                opacity: 1;
+                transform: rotate(800deg);
+                animation-timing-function: cubic-bezier(0.5, 0.32, 0.82, 0.54);
+            }
+
+            68% {
+                opacity: 1;
+                transform: rotate(910deg);
+                animation-timing-function: ease-in;
+            }
+
+            69% {
+                opacity: 0;
+                transform: rotate(920deg);
+            }
+        }
+
+        @keyframes i3 {
+            0% {
+                opacity: 1;
+                transform: rotate(170deg);
+                animation-timing-function: cubic-bezier(0.29, 0.44, 0.32, 0.74);
+            }
+
+            7% {
+                opacity: 1;
+                transform: rotate(300deg);
+                animation-timing-function: linear;
+            }
+
+            30% {
+                opacity: 1;
+                transform: rotate(450deg);
+                animation-timing-function: cubic-bezier(0.53, 0.27, 0.37, 0.81);
+            }
+
+            39% {
+                opacity: 1;
+                transform: rotate(645deg);
+                animation-timing-function: linear;
+            }
+
+            63% {
+                opacity: 1;
+                transform: rotate(800deg);
+                animation-timing-function: cubic-bezier(0.5, 0.32, 0.82, 0.54);
+            }
+
+            68% {
+                opacity: 1;
+                transform: rotate(900deg);
+                animation-timing-function: ease-in;
+            }
+
+            69% {
+                opacity: 0;
+                transform: rotate(910deg);
+            }
+        }
+
+        @keyframes i4 {
+            0% {
+                opacity: 1;
+                transform: rotate(160deg);
+                animation-timing-function: cubic-bezier(0.29, 0.44, 0.32, 0.74);
+            }
+
+            7% {
+                opacity: 1;
+                transform: rotate(300deg);
+                animation-timing-function: linear;
+            }
+
+            30% {
+                opacity: 1;
+                transform: rotate(450deg);
+                animation-timing-function: cubic-bezier(0.53, 0.27, 0.37, 0.81);
+            }
+
+            39% {
+                opacity: 1;
+                transform: rotate(645deg);
+                animation-timing-function: linear;
+            }
+
+            63% {
+                opacity: 1;
+                transform: rotate(800deg);
+                animation-timing-function: cubic-bezier(0.5, 0.32, 0.82, 0.54);
+            }
+
+            68% {
+                opacity: 1;
+                transform: rotate(890deg);
+                animation-timing-function: ease-in;
+            }
+
+            69% {
+                opacity: 0;
+                transform: rotate(900deg);
+            }
+        }
+
+        @keyframes i5 {
+            0% {
+                opacity: 1;
+                transform: rotate(150deg);
+                animation-timing-function: cubic-bezier(0.29, 0.44, 0.32, 0.74);
+            }
+
+            7% {
+                opacity: 1;
+                transform: rotate(300deg);
+                animation-timing-function: linear;
+            }
+
+            30% {
+                opacity: 1;
+                transform: rotate(450deg);
+                animation-timing-function: cubic-bezier(0.53, 0.27, 0.37, 0.81);
+            }
+
+            39% {
+                opacity: 1;
+                transform: rotate(645deg);
+                animation-timing-function: linear;
+            }
+
+            63% {
+                opacity: 1;
+                transform: rotate(800deg);
+                animation-timing-function: cubic-bezier(0.5, 0.32, 0.82, 0.54);
+            }
+
+            68% {
+                opacity: 1;
+                transform: rotate(880deg);
+                animation-timing-function: ease-in;
+            }
+
+            69% {
+                opacity: 0;
+                transform: rotate(880deg);
+            }
+        }
+
+        @keyframes i6 {
+            0% {
+                opacity: 1;
+                transform: rotate(140deg);
+                animation-timing-function: cubic-bezier(0.29, 0.44, 0.32, 0.74);
+            }
+
+            7% {
+                opacity: 1;
+                transform: rotate(300deg);
+                animation-timing-function: linear;
+            }
+
+            30% {
+                opacity: 1;
+                transform: rotate(450deg);
+                animation-timing-function: cubic-bezier(0.53, 0.27, 0.37, 0.81);
+            }
+
+            39% {
+                opacity: 1;
+                transform: rotate(645deg);
+                animation-timing-function: linear;
+            }
+
+            63% {
+                opacity: 1;
+                transform: rotate(800deg);
+                animation-timing-function: cubic-bezier(0.5, 0.32, 0.82, 0.54);
+            }
+
+            68% {
+                opacity: 1;
+                transform: rotate(870deg);
+                animation-timing-function: ease-in;
+            }
+
+            69% {
+                opacity: 0;
+                transform: rotate(880deg);
+            }
+        }
+    </style>
     <script>
-        let time = null;
-        if(!time){
-            time = setInterval(()=>{
-            loop();
-            }, 100);
-        }
         document.onreadystatechange = completeLoading;
         function completeLoading() {
             if (document.readyState == "complete") {
-                clearInterval(time);
-                time = null;
                 var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
-                var browser='unknown';
-                if (userAgent.indexOf("IE")!=-1)
-                {
-                    location.href="https://support.microsoft.com/zh-cn/topic/%E6%AD%A4%E7%BD%91%E7%AB%99%E5%9C%A8-microsoft-edge-%E4%B8%AD%E6%9B%B4%E5%A5%BD%E5%9C%B0%E5%B7%A5%E4%BD%9C-160fa918-d581-4932-9e4e-1075c4713595?ui=zh-cn&rs=zh-cn&ad=cn"
+                var browser = 'unknown';
+                if (userAgent.indexOf("IE") != -1) {
+                    location.href = "https://support.microsoft.com/zh-cn/topic/%E6%AD%A4%E7%BD%91%E7%AB%99%E5%9C%A8-microsoft-edge-%E4%B8%AD%E6%9B%B4%E5%A5%BD%E5%9C%B0%E5%B7%A5%E4%BD%9C-160fa918-d581-4932-9e4e-1075c4713595?ui=zh-cn&rs=zh-cn&ad=cn"
                 }
-                else
-                {
-                    const loading = document.querySelector('#loading');
-                    loading.remove();
+                else {
+                    document.getElementById('123456').remove()
                 }
             }
         }
     </script>
 </head>
+
 <body>
-    <div id="loading" class="loading">
-		<i>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-		</i>
-        <br />
-        <noscript>
-            <div class="alert alert-danger">
-    			<strong>错误!</strong> 您没有启用或您的浏览器不支持 JavaScript，LYKNS不能正常运行。请开启 JavaScript 或换用支持 JavaScript 的浏览器以继续。
-  			</div>
-        </noscript>
-    </div>
+    <noscript>
+        <div class="alert alert-danger">
+            <strong>错误!</strong> 您没有启用或您的浏览器不支持 JavaScript，LYKNS可能不能正常运行。请开启 JavaScript 或换用支持 JavaScript 的浏览器以继续。
+        </div>
+    </noscript>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand text-primary" herf="https://www.lykns.tk/"><img src="https://www.lykns.tk/p/logo.webp" /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand text-primary" herf="https://www.lykns.tk/"><img
+                        src="https://www.lykns.tk/p/logo.webp" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
@@ -143,7 +389,8 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-primary" data-bs-toggle="dropdown">服务</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="https://www.lykns.tk/Services/CBLFSD">文件存储档案服务器</a></li>
+                                <li><a class="dropdown-item" href="https://www.lykns.tk/Services/CBLFSD">文件存储档案服务器</a>
+                                </li>
                                 <li><a class="dropdown-item" href="https://www.lykns.tk/20220214">研学文献</a></li>
                             </ul>
                         </li>
@@ -152,7 +399,8 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="https://www.lykns.tk/Database/CBLD">日志数据库</a></li>
                                 <li><a class="dropdown-item" href="https://www.lykns.tk/Database/CBCD">成绩数据库</a></li>
-                                <li><a class="dropdown-item" href="https://www.lykns.tk/Database/CBRPFD">关系人档案数据库</a></li>
+                                <li><a class="dropdown-item" href="https://www.lykns.tk/Database/CBRPFD">关系人档案数据库</a>
+                                </li>
                                 <li><a class="dropdown-item" href="https://www.lykns.tk/Database/LYKFD">财政数据库</a></li>
                             </ul>
                         </li>
@@ -184,51 +432,64 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-<!--添加代码--><!-- InstanceBeginEditable name="EditRegion1" --><h1 class="text-primary">LYK 网络系统隐私政策<small>上次更新时间： 2021 年 12 月</small></h1>
+            <!--添加代码-->
+            <!-- InstanceBeginEditable name="EditRegion1" -->
+            <h1 class="text-primary">LYK 网络系统隐私政策<small>上次更新时间： 2021 年 12 月</small></h1>
 
-<p>我们十分重视你的隐私。 当你使用 LYKNS 产品和服务时，我们会获得你的某些信息。 这些信息（如你的姓名和电子邮件地址）称为个人数据。 我们希望你了解我们拥有哪些关于你的个人数据以及我们如何使用它。 我们还希望你了解你对该数据拥有权利。 你可以通过保护隐私的方式使用我们的产品。</p>
+            <p>我们十分重视你的隐私。 当你使用 LYKNS 产品和服务时，我们会获得你的某些信息。 这些信息（如你的姓名和电子邮件地址）称为个人数据。 我们希望你了解我们拥有哪些关于你的个人数据以及我们如何使用它。
+                我们还希望你了解你对该数据拥有权利。 你可以通过保护隐私的方式使用我们的产品。</p>
 
-<h2>我们收集的个人数据</h2>
-<p>我们的许多产品都需要个人数据才能正常工作。 我们获取的个人数据类型取决于你使用的产品和功能。
+            <h2>我们收集的个人数据</h2>
+            <p>我们的许多产品都需要个人数据才能正常工作。 我们获取的个人数据类型取决于你使用的产品和功能。
 
-当你使用 LYKNS 产品时，我们可能会要求你回答一些关于你自己的问题。 比如你的姓名、电子邮件地址和生日。 如果你在 LYKNS 产品中创建帐户，我们可能会要求你创建密码。
+                当你使用 LYKNS 产品时，我们可能会要求你回答一些关于你自己的问题。 比如你的姓名、电子邮件地址和生日。 如果你在 LYKNS 产品中创建帐户，我们可能会要求你创建密码。
 
-我们还保存了有关如何使用 LYKNS 产品和服务的一些详细信息。 这可能是你访问的网页、玩的游戏、进行的购买或有关所用设备的详细信息。 你还可以使用 LYKNS 服务创建或共享文件，例如照片或文档。 我们会将此视为你的内容，并为你存储此内容。
+                我们还保存了有关如何使用 LYKNS 产品和服务的一些详细信息。 这可能是你访问的网页、玩的游戏、进行的购买或有关所用设备的详细信息。 你还可以使用 LYKNS 服务创建或共享文件，例如照片或文档。
+                我们会将此视为你的内容，并为你存储此内容。
 
-我们有时会从其他人获取你的数据。 例如，如果你的帐户由家长或监护人创建，我们会收集他们提供的关于你的信息。 如果你在学校使用 LYKNS 产品，我们可能会从老师或学校获取你的一些信息。
+                我们有时会从其他人获取你的数据。 例如，如果你的帐户由家长或监护人创建，我们会收集他们提供的关于你的信息。 如果你在学校使用 LYKNS 产品，我们可能会从老师或学校获取你的一些信息。
 
-有时，我们会让你选择我们可以获取的数据。 但是，如果你选择拒绝向我们提供所需的数据，你将无法使用相应的产品或功能。 如果选择拒绝向我们提供可选的数据，则可以使用相应的产品，但某些功能可能不起作用。</p>
+                有时，我们会让你选择我们可以获取的数据。 但是，如果你选择拒绝向我们提供所需的数据，你将无法使用相应的产品或功能。 如果选择拒绝向我们提供可选的数据，则可以使用相应的产品，但某些功能可能不起作用。</p>
 
-<p> </p>
+            <p> </p>
 
-<h2>我们如何使用个人数据</h2>
+            <h2>我们如何使用个人数据</h2>
 
-<p>LYKNS 使用数据为你打造出色的体验。 我们会使用个人数据执行以下操作：</p>
-<ul>
-    <li>提供和支持产品。</li>
-    <li>改进和开发产品。</li>
-    <li>个性化产品并提出建议。</li>
-    <li>宣传和推广产品。</li>
-    <li>运行并改进业务。</li>
-</ul>
-<p>使用此数据时，我们可能会链接来自不同源的数据。 通过链接此数据，我们会为你打造方便的体验，并帮助我们更好地运行业务。
+            <p>LYKNS 使用数据为你打造出色的体验。 我们会使用个人数据执行以下操作：</p>
+            <ul>
+                <li>提供和支持产品。</li>
+                <li>改进和开发产品。</li>
+                <li>个性化产品并提出建议。</li>
+                <li>宣传和推广产品。</li>
+                <li>运行并改进业务。</li>
+            </ul>
+            <p>使用此数据时，我们可能会链接来自不同源的数据。 通过链接此数据，我们会为你打造方便的体验，并帮助我们更好地运行业务。
 
-我们不会使用你的电子邮件、聊天记录、文件或其他个人内容来针对你投放广告。</p>
+                我们不会使用你的电子邮件、聊天记录、文件或其他个人内容来针对你投放广告。</p>
 
-<h2>如何访问和控制你的个人数据</h2>
-<p>你可以联系我们，了解访问或控制个人数据的更多方式。 与我们联系的最佳方式是使用 Web 表单。
+            <h2>如何访问和控制你的个人数据</h2>
+            <p>你可以联系我们，了解访问或控制个人数据的更多方式。 与我们联系的最佳方式是使用 Web 表单。
 
-居住地的法律可能会授予你某些权利，例如访问或请求删除个人数据的权利。 但我们为所有用户提供上述选项和控制，无论他们身在何处。 请注意，在某些情况下，访问或控制个人数据的能力可能会受到限制（例如，出于法律或其他重要原因需要保留数据）。</p>
+                居住地的法律可能会授予你某些权利，例如访问或请求删除个人数据的权利。 但我们为所有用户提供上述选项和控制，无论他们身在何处。
+                请注意，在某些情况下，访问或控制个人数据的能力可能会受到限制（例如，出于法律或其他重要原因需要保留数据）。</p>
 
-<h2>个人数据存储的地点</h2>
-<p>我们将个人数据存储在亚太地区。 我们会使用强大的安全保护。 我们采取一些措施来保护你的隐私并遵守法律。</p><!-- InstanceEndEditable -->
-      </main>
+            <h2>个人数据存储的地点</h2>
+            <p>我们将个人数据存储在亚太地区。 我们会使用强大的安全保护。 我们采取一些措施来保护你的隐私并遵守法律。</p><!-- InstanceEndEditable -->
+        </main>
     </div>
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2018-2023 - LYK Network System - <a href="https://www.lykns.tk/sitemap.html">网站地图 </a>- <a href="https://www.lykns.tk/cc">CC知识共享许可协议 </a>- <a href="https://www.lykns.tk/more.html">更多页面与过期页面</a>
+            &copy; 2018-2023 - LYK Network System - <a href="https://www.lykns.tk/sitemap.html">网站地图 </a>- <a
+                href="https://www.lykns.tk/cc">CC知识共享许可协议 </a>- <a href="https://www.lykns.tk/more.html">更多页面与过期页面</a>
         </div>
     </footer>
+    <div class="loader-wrapper" id="123456">
+        <div class="loading"> <i> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> </i>
+        </div>
+    </div>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>
