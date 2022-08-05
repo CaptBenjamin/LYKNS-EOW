@@ -15,7 +15,9 @@ html {
 
 body {
   margin-bottom: 60px;
-  background-image: url(https://aadcdn.msauth.net/shared/1.0/content/images/backgrounds/2_bc3d32a696895f78c19df6c717586a5d.svg)
+  background-image: url(https://aadcdn.msauth.net/shared/1.0/content/images/backgrounds/2_bc3d32a696895f78c19df6c717586a5d.svg);
+background-repeat:no-repeat;
+background-attachment:fixed;
 }
 
 --primary-color: rgb(0, 120, 212);
