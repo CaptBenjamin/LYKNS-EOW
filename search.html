@@ -373,11 +373,6 @@
 </head>
 
 <body>
-    <noscript>
-        <div class="alert alert-danger">
-            <strong>错误!</strong> 您没有启用或您的浏览器不支持 JavaScript，LYKNS可能不能正常运行。请开启 JavaScript 或换用支持 JavaScript 的浏览器以继续。
-        </div>
-    </noscript>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
@@ -438,6 +433,11 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            <noscript>
+                <div class="alert alert-danger">
+                    <strong>错误!</strong> 您没有启用或您的浏览器不支持 JavaScript，LYKNS可能不能正常运行。请开启 JavaScript 或换用支持 JavaScript 的浏览器以继续。
+                </div>
+            </noscript>
             <h1 class="text-primary">LYKNS | Google 联合搜索引擎<span class="badge rounded-pill bg-danger">Beta</span></h1>
             采用谷歌搜索技术，如果下方未显示搜索框，需要科学上网
             <script async src="https://cse.google.com/cse.js?cx=069557f04708e4346">
@@ -453,7 +453,14 @@
         </div>
     </footer>
     <div class="loader-wrapper" id="123456">
-        <div class="loading"> <i> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <div class="loading">
+            <noscript>
+                <div class="alert alert-danger">
+                    <strong>错误!</strong> 您没有启用或您的浏览器不支持 JavaScript，LYKNS可能不能正常运行。请开启 JavaScript 或换用支持 JavaScript
+                    的浏览器以继续。
+                </div>
+            </noscript>
+            <i> <span></span> <span></span> <span></span> <span></span> <span></span>
                 <span></span> </i>
         </div>
     </div>
