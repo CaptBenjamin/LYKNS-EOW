@@ -10,6 +10,38 @@
     <link href="https://www.lykns.tk/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://www.lykns.tk/js/bootstrap.bundle.min.js"></script>
     <style>
+        .text {
+            display: inline-block;
+            position: relative;
+            font-size: 40px;
+            height: 60px;
+            line-height: 60px;
+            color: #0078d4;
+        }
+
+        .text::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 5px;
+            height: 50px;
+            width: 3px;
+            background-color: #fff;
+            animation: san 0.5s steps(1) infinite;
+        }
+
+        @keyframes san {
+
+            0%,
+            100% {
+                background-color: #0078d4;
+            }
+
+            50% {
+                background-color: transparent;
+            }
+
+        }
         a {
             text-decoration: none
         }
@@ -60,6 +92,14 @@
             left: calc(50% - 40px);
             width: 80px;
             height: 80px;
+            display: block;
+        }
+
+        .loading p {
+            margin: auto;
+            position: absolute;
+            top: calc(50% + 70px);
+            left: calc(50% - 47px);
             display: block;
         }
 
@@ -468,6 +508,7 @@
             </noscript>
             <i> <span></span> <span></span> <span></span> <span></span> <span></span>
                 <span></span> </i>
+            <p class="text-white text-center" style="font-size:25px">请稍候...</p>
         </div>
     </div>
 </body>

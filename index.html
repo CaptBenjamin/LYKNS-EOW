@@ -10,6 +10,39 @@
     <link href="https://www.lykns.tk/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://www.lykns.tk/js/bootstrap.bundle.min.js"></script>
     <style>
+        .text {
+            display: inline-block;
+            position: relative;
+            font-size: 40px;
+            height: 60px;
+            line-height: 60px;
+            color: #0078d4;
+        }
+
+        .text::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 5px;
+            height: 50px;
+            width: 3px;
+            background-color: #fff;
+            animation: san 0.5s steps(1) infinite;
+        }
+
+        @keyframes san {
+
+            0%,
+            100% {
+                background-color: #0078d4;
+            }
+
+            50% {
+                background-color: transparent;
+            }
+
+        }
+
         a {
             text-decoration: none
         }
@@ -60,6 +93,14 @@
             left: calc(50% - 40px);
             width: 80px;
             height: 80px;
+            display: block;
+        }
+
+        .loading p {
+            margin: auto;
+            position: absolute;
+            top: calc(50% + 70px);
+            left: calc(50% - 47px);
             display: block;
         }
 
@@ -452,11 +493,43 @@
     </div>&emsp;&emsp;&emsp;&emsp;&emsp;拥有 LYKNS Corporation 组织账户的人员请通过导航栏右侧电离辐射警告标志登录进入 LYKNS
     内部主页访问更多内容。&emsp;&emsp;&emsp;&emsp;&emsp;本站所有内容均根据 Creative Commons 4.0 国际协议进行许可，详情请前往页脚访问CC许可协议页面。
     </marquee>
-    <div class="text-center">
-        <a href="https://git.io/typing-svg"><img
-                src="https://readme-typing-svg.herokuapp.com?font=Dengxian&size=50&color=0078D4&center=true&vCenter=true&height=70&lines=%E6%AC%A2%E8%BF%8E%E8%AE%BF%E9%97%AE%EF%BC%81;LYKNS%E5%A4%96%E9%83%A8%E5%AE%98%E7%BD%91;Welcome!"
-                alt="Typing SVG" /></a>
-    </div>
+    <h1 class="text-primary text-center">
+        <span class="text"></span>
+    </h1>
+    <script>
+        const text = document.querySelector('.text');
+        const txt = ["欢迎访问！", "LYKNS 外部官网", "Welcome!"];
+
+        var index = 0;
+        var xiaBiao = 0;
+        var huan = true;
+
+        setInterval(function () {
+
+            if (huan) {
+                text.innerHTML = txt[xiaBiao].slice(0, ++index);
+                console.log(index);
+            }
+            else {
+                text.innerHTML = txt[xiaBiao].slice(0, index--);
+                console.log(index);
+            }
+
+            if (index == txt[xiaBiao].length + 3) {
+                huan = false;
+            }
+            else if (index < 0) {
+                index = 0;
+                huan = true;
+                xiaBiao++;
+                if (xiaBiao >= txt.length) {
+                    xiaBiao = 0;
+                }
+            }
+
+        }, 200)
+
+    </script>
     <!-- 轮播 -->
     <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
@@ -574,6 +647,7 @@
             </noscript>
             <i> <span></span> <span></span> <span></span> <span></span> <span></span>
                 <span></span> </i>
+            <p class="text-white text-center" style="font-size:25px">请稍候...</p>
         </div>
     </div>
 </body>
