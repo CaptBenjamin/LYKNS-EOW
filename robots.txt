@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.lykns.tk/sitemap.xml
+Sitemap: https://eow.lykns.tk/sitemap.xml
