@@ -5,8 +5,8 @@
     <link rel="shortcut icon" href="../favicon.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="搜索 LYKNS">
-    <title>LYKNS | Google 联合搜索引擎</title>
+    <meta name="description" content="CaptB 关系人档案数据库 - CBRPFD">
+    <title>关系人档案数据库 - LYKNS</title>
     <link href="https://eow.lykns.tk/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://eow.lykns.tk/js/bootstrap.bundle.min.js"></script>
     <style>
@@ -482,11 +482,31 @@
                     <strong>错误!</strong> 您没有启用或您的浏览器不支持 JavaScript，LYKNS可能不能正常运行。请开启 JavaScript 或换用支持 JavaScript 的浏览器以继续。
                 </div>
             </noscript>
-            <h1 class="text-primary">LYKNS | Google 联合搜索引擎<span class="badge rounded-pill bg-danger">Beta</span></h1>
-            采用谷歌搜索技术，如果下方未显示搜索框，需要科学上网
-            <script async src="https://cse.google.com/cse.js?cx=069557f04708e4346">
+            <h1 class="text-primary">关系人档案数据库</h1>
+            <script language="JavaScript" type="text/javascript">
+                function delayURL(url) {
+                    var delay = document.getElementById("time").innerHTML;
+                    if (delay > 0) {
+                        delay--;
+                        document.getElementById("time").innerHTML = delay;
+                    }
+                    else {
+                        window.top.location.href = url;
+                    }
+                    setTimeout("delayURL('" + url + "')", 1000);
+                }
             </script>
-            <div class="gcse-search"></div>
+            <div class="text-center">
+                <h2 class="text-danger">关系人档案数据库 需要登陆</h2>
+                <br />
+                <p>跳转到Microsoft标识平台登陆具有访问权限的LYKNS on Microsoft账号</p>
+                <br />
+                <span id="time">11</span>秒钟后自动跳转，如果没有自动跳转，请点击<a
+                    href="https://captbenjaminlee.sharepoint.com/sites/CBRPFD">这里</a>手动跳转到Microsoft标识平台登陆页面。
+            </div>
+            <script type="text/javascript">
+                delayURL("https://captbenjaminlee.sharepoint.com/sites/CBRPFD");
+            </script><!-- InstanceEndEditable -->
         </main>
     </div>
 
@@ -510,5 +530,6 @@
         </div>
     </div>
 </body>
+<!-- InstanceEnd -->
 
 </html>
