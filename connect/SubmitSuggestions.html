@@ -432,7 +432,10 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="https://eow.lykns.tk/">主页</a>
+                            <a class="nav-link text-dark" href="https://www.lykns.tk/">返回主站</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="https://eow.lykns.tk/">LYKNS外部主页</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-primary" data-bs-toggle="dropdown">服务</a>
@@ -486,11 +489,26 @@
                     href="https://forms.office.com/Pages/ResponsePage.aspx?id=G1KQ9WX6qEqaVTQ3DOZpUHLzzfu_kEJBvBxw3qIlFUZUOVRNVldUR1g0SkpETDlVQVNZVTJNODJaVS4u&embed=true">独立打开框架中的内容
                     &raquo;</a>
             </div>
-            <iframe width="100%" height="1500"
+            <iframe id="mainiframe" width="100%" height="100"
                 src="https://forms.office.com/Pages/ResponsePage.aspx?id=G1KQ9WX6qEqaVTQ3DOZpUHLzzfu_kEJBvBxw3qIlFUZUOVRNVldUR1g0SkpETDlVQVNZVTJNODJaVS4u&embed=true"
-                frameborder="0" marginwidth="0" marginheight="0"
-                style=" border: #0078d4 2px solid; max-width:100%; max-height:100vh" allowfullscreen
-                webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe><!-- InstanceEndEditable -->
+                frameborder="0" scrolling="auto"
+                style=" border: #0078d4 2px solid; max-width:100%; max-height:100%"></iframe>
+            <script>
+                function changeFrameHeight() {
+                    var ifm = document.getElementById("mainiframe");
+                    ifm.height = document.documentElement.clientHeight - 260;
+                }
+                window.onresize = function () { changeFrameHeight(); }
+                $(function () { changeFrameHeight(); });
+            </script>
+            <script>
+                function changeFrameHeight() {
+                    var ifm = document.getElementById("mainiframe");
+                    ifm.height = document.documentElement.clientHeight - 260;
+                }
+                window.onload = function () { changeFrameHeight(); }
+                $(function () { changeFrameHeight(); });
+            </script>
         </main>
     </div>
 

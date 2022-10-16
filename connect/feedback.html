@@ -42,6 +42,7 @@
             }
 
         }
+
         a {
             text-decoration: none
         }
@@ -423,8 +424,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand text-primary" herf="https://eow.lykns.tk/"><img
-                        src="/p/logo.webp" /></a>
+                <a class="navbar-brand text-primary" herf="https://eow.lykns.tk/"><img src="/p/logo.webp" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -432,7 +432,10 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="https://eow.lykns.tk/">主页</a>
+                            <a class="nav-link text-dark" href="https://www.lykns.tk/">返回主站</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="https://eow.lykns.tk/">LYKNS外部主页</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-primary" data-bs-toggle="dropdown">服务</a>
@@ -476,7 +479,8 @@
         <main role="main" class="pb-3">
             <noscript>
                 <div class="alert alert-danger">
-                    <strong>错误!</strong> 您没有启用或您的浏览器不支持 JavaScript，LYKNS可能不能正常运行。请开启 JavaScript 或换用支持 JavaScript 的浏览器以继续。
+                    <strong>错误!</strong> 您没有启用或您的浏览器不支持 JavaScript，LYKNS可能不能正常运行。请开启 JavaScript 或换用支持 JavaScript
+                    的浏览器以继续。
                 </div>
             </noscript>
             <h1 class="text-primary">问题反馈</h1>
@@ -486,18 +490,35 @@
                     href="https://forms.office.com/Pages/ResponsePage.aspx?id=G1KQ9WX6qEqaVTQ3DOZpUHLzzfu_kEJBvBxw3qIlFUZUMk05WDU5VVlOUTdZQUc3RlFRWTFaM1JWSi4u&embed=true">独立打开框架中的内容
                     &raquo;</a>
             </div>
-            <iframe width="100%" height="1500"
+            <iframe id="mainiframe" width="100%" height="100"
                 src="https://forms.office.com/Pages/ResponsePage.aspx?id=G1KQ9WX6qEqaVTQ3DOZpUHLzzfu_kEJBvBxw3qIlFUZUMk05WDU5VVlOUTdZQUc3RlFRWTFaM1JWSi4u&embed=true"
-                frameborder="0" marginwidth="0" marginheight="0"
-                style=" border: #0078d4 2px solid; max-width:100%; max-height:100vh" allowfullscreen
-                webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe><!-- InstanceEndEditable -->
+                frameborder="0" scrolling="auto"
+                style=" border: #0078d4 2px solid; max-width:100%; max-height:100%"></iframe>
+            <script>
+                function changeFrameHeight() {
+                    var ifm = document.getElementById("mainiframe");
+                    ifm.height = document.documentElement.clientHeight - 260;
+                }
+                window.onresize = function () { changeFrameHeight(); }
+                $(function () { changeFrameHeight(); });
+            </script>
+            <script>
+                function changeFrameHeight() {
+                    var ifm = document.getElementById("mainiframe");
+                    ifm.height = document.documentElement.clientHeight - 260;
+                }
+                window.onload = function () { changeFrameHeight(); }
+                $(function () { changeFrameHeight(); });
+            </script>
         </main>
     </div>
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2018-2023 - LYKNS - <a href="https://eow.lykns.tk/sitemap.html">网站地图 </a> - <a href="https://status.lykns.tk">状态监测 </a>- <a
-                href="https://eow.lykns.tk/cc"><img src="https://img.shields.io/badge/Creative_Commons-4.0%20%E5%9B%BD%E9%99%85%20%E8%AE%B8%E5%8F%AF%E5%8D%8F%E8%AE%AE-EF9421?style=flat-square&logo=creativecommons"></a>- <a href="https://eow.lykns.tk/more.html">更多页面与过期页面</a>
+            &copy; 2018-2023 - LYKNS - <a href="https://eow.lykns.tk/sitemap.html">网站地图 </a> - <a
+                href="https://status.lykns.tk">状态监测 </a>- <a href="https://eow.lykns.tk/cc"><img
+                    src="https://img.shields.io/badge/Creative_Commons-4.0%20%E5%9B%BD%E9%99%85%20%E8%AE%B8%E5%8F%AF%E5%8D%8F%E8%AE%AE-EF9421?style=flat-square&logo=creativecommons"></a>-
+            <a href="https://eow.lykns.tk/more.html">更多页面与过期页面</a>
         </div>
     </footer>
     <div class="loader-wrapper" id="123456">
