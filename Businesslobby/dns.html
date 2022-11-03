@@ -2,11 +2,11 @@
 <html lang="zh-CN">
 
 <head>
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="../favicon.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="办事大厅 - LYKNS">
-    <title>办事大厅 - LYKNS</title>
+    <meta name="description" content="向 LYKNS 办理DNS业务">
+    <title>DNS - LYKNS</title>
     <link href="https://eow.lykns.tk/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://eow.lykns.tk/js/bootstrap.bundle.min.js"></script>
     <style>
@@ -492,47 +492,33 @@
                     <strong>错误!</strong> 您没有启用或您的浏览器不支持 JavaScript，LYKNS可能不能正常运行。请开启 JavaScript 或换用支持 JavaScript 的浏览器以继续。
                 </div>
             </noscript>
-            <div class="card img-fluid" style="width:100%">
-                <img class="card-img-top" src="/p/04.webp" alt="Card image" style="width:100%"
-                    oncontextmenu="return false;" ondragstart="return false;">
-                <div class="card-img-overlay">
-                    <h2 class="card-title text-primary"><b>LYK网络系统 办事大厅</b></h2>
-                    <p onselectstart="return false;" class="card-text">有事情？进入办事大厅提交申请。</p>
-                </div>
+            <h1 class="text-primary">DNS 注册</h1>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>重要信息!</strong>一些旧的浏览器不支持嵌入框架.你可以尝试独立打开框架中的内容。<a class="btn btn-outline-secondary btn-sm"
+                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=G1KQ9WX6qEqaVTQ3DOZpUHLzzfu_kEJBvBxw3qIlFUZUNFJKTUg4WU9YWUtHU0hXVUhXR1BGMVNPRS4u">独立打开框架中的内容
+                    &raquo;</a>
             </div>
-            <p></p>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">申请贷款</h4>
-                            <p onselectstart="return false;" class="card-text"></p>
-                            <a class="btn btn-outline-secondary btn-sm"
-                                href="https://eow.lykns.tk/Businesslobby/applyforaloan">填写申请表 &raquo;</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">货币兑换</h4>
-                            <p class="card-text"></p>
-                            <a class="btn btn-outline-secondary btn-sm"
-                                href="https://eow.lykns.tk/Businesslobby/currencyexchange">填写申请表 &raquo;</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">LYKNS DNS 服务及二级域名注册</h4>
-                            <p class="card-text"></p>
-                            <a class="btn btn-outline-secondary btn-sm"
-                                href="https://eow.lykns.tk/Businesslobby/dns">填写申请表 &raquo;</a>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- InstanceEndEditable -->
+            <iframe id="mainiframe" width="100%" height="100"
+                src="https://forms.office.com/Pages/ResponsePage.aspx?id=G1KQ9WX6qEqaVTQ3DOZpUHLzzfu_kEJBvBxw3qIlFUZUNFJKTUg4WU9YWUtHU0hXVUhXR1BGMVNPRS4u"
+                frameborder="0" scrolling="auto"
+                style=" border: #0078d4 2px solid; max-width:100%; max-height:100%"></iframe>
+            <script>
+                function changeFrameHeight() {
+                    var ifm = document.getElementById("mainiframe");
+                    ifm.height = document.documentElement.clientHeight - 275;
+                }
+                window.onresize = function () { changeFrameHeight(); }
+                $(function () { changeFrameHeight(); });
+            </script>
+            <script>
+                function changeFrameHeight() {
+                    var ifm = document.getElementById("mainiframe");
+                    ifm.height = document.documentElement.clientHeight - 275;
+                }
+                window.onload = function () { changeFrameHeight(); }
+                $(function () { changeFrameHeight(); });
+            </script>
         </main>
     </div>
 
