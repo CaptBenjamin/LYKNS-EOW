@@ -1,5 +1,0 @@
-># allow google
-User-agent: *
-Disallow:
-
-Sitemap: https://eow.lykns.tk/sitemap.xml
