@@ -493,20 +493,20 @@
                 </div>
             </noscript>
             <h1 class="text-primary">DNS 注册</h1>
-            <div class="alert alert-info alert-dismissible fade show">
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                <strong>重要信息!</strong>一些旧的浏览器不支持嵌入框架.你可以尝试独立打开框架中的内容。<a class="btn btn-outline-secondary btn-sm"
-                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=G1KQ9WX6qEqaVTQ3DOZpUHLzzfu_kEJBvBxw3qIlFUZUNFJKTUg4WU9YWUtHU0hXVUhXR1BGMVNPRS4u">独立打开框架中的内容
-                    &raquo;</a>
-            </div>
             <iframe id="mainiframe" width="100%" height="100"
                 src="https://forms.office.com/Pages/ResponsePage.aspx?id=G1KQ9WX6qEqaVTQ3DOZpUHLzzfu_kEJBvBxw3qIlFUZUNFJKTUg4WU9YWUtHU0hXVUhXR1BGMVNPRS4u"
                 frameborder="0" scrolling="auto"
-                style=" border: #0078d4 2px solid; max-width:100%; max-height:100%"></iframe>
+                style=" border: #0078d4 2px solid; max-width:100%; max-height:100%">
+                <div class="alert alert-info alert-dismissible fade show">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    <strong>重要信息!</strong>一些旧的浏览器不支持嵌入框架.你可以尝试独立打开框架中的内容。<a class="btn btn-outline-secondary btn-sm"
+                        href="https://forms.office.com/Pages/ResponsePage.aspx?id=G1KQ9WX6qEqaVTQ3DOZpUHLzzfu_kEJBvBxw3qIlFUZUNFJKTUg4WU9YWUtHU0hXVUhXR1BGMVNPRS4u">独立打开框架中的内容
+                        &raquo;</a>
+                </div></iframe>
             <script>
                 function changeFrameHeight() {
                     var ifm = document.getElementById("mainiframe");
-                    ifm.height = document.documentElement.clientHeight - 275;
+                    ifm.height = document.documentElement.clientHeight - 200;
                 }
                 window.onresize = function () { changeFrameHeight(); }
                 $(function () { changeFrameHeight(); });
@@ -514,7 +514,7 @@
             <script>
                 function changeFrameHeight() {
                     var ifm = document.getElementById("mainiframe");
-                    ifm.height = document.documentElement.clientHeight - 275;
+                    ifm.height = document.documentElement.clientHeight - 200;
                 }
                 window.onload = function () { changeFrameHeight(); }
                 $(function () { changeFrameHeight(); });
