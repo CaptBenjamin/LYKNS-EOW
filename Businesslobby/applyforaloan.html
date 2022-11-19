@@ -535,7 +535,7 @@
                                     <label for="rll" class="form-label">约定日利率</label>
                                     <div class="input-group">
                                         <input class="form-control" type="number" id="rll" name="rll" min="0.1014"
-                                            max="154" required>
+                                            step="0.0001" max="154" required>
                                         <span class="input-group-text">‰</span>
                                     </div>
                                 </div>
@@ -543,8 +543,8 @@
                             <div class="row">
                                 <label for="bj" class="form-label">本金</label>
                                 <div class="input-group">
-                                    <input class="form-control" type="number" id="bj" name="bj" min="0.01" max="10000"
-                                        required>
+                                    <input class="form-control" type="number" id="bj" name="bj" min="0.01"
+                                        max="10000.00" step="0.01" required>
                                     <span class="input-group-text">元</span>
                                 </div>
                             </div><br>

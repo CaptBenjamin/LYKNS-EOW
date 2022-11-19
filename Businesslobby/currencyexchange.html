@@ -526,7 +526,7 @@
                                 <div class="col">
                                     <label for="dhje">兑换金额</label>
                                     <div class="input-group">
-                                        <input class="form-control" type="number" id="dhje" name="dhje" min="1"
+                                        <input class="form-control" type="number" id="dhje" name="dhje" min="0.01" step="0.01"
                                             required>
                                         <span class="input-group-text">元</span>
                                     </div>
@@ -534,7 +534,7 @@
                                 <div class="col">
                                     <label for="sxfl">约定手续费率</label>
                                     <div class="input-group">
-                                        <input class="form-control" type="number" id="sxfl" name="sxfl" min="0.1"
+                                        <input class="form-control" type="number" id="sxfl" name="sxfl" min="0.1" step="0.01"
                                             max="15.4" required>
                                         <span class="input-group-text">％</span>
                                     </div>
@@ -574,10 +574,14 @@
                             var sxfl = document.getElementById("sxfl");
                             var zj;
                             var sxf;
-                            sxf = change(dhje.value) * change(sxfl.value) * 0.01
+                            var a;
+                            var b;
+                            sxf = change(dhje.value) * change(sxfl.value) * 0.01;
                             zj = change(dhje.value) + sxf;
-                            document.getElementById("sxf").value = sxf;
-                            document.getElementById("zj").value = zj;
+                            a=sxf.toFixed(2);
+                            b=zj.toFixed(2);
+                            document.getElementById("sxf").value = a;
+                            document.getElementById("zj").value = b;
                             document.getElementById("jz1").style = "width:33%";
                         }
                         function change(x) {
