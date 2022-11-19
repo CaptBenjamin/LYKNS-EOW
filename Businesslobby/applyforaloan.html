@@ -498,32 +498,141 @@
                 </div>
             </noscript>
             <h1 class="text-primary">申请贷款</h1>
-            <iframe id="mainiframe" width="100%" height="100"
-                src="https://forms.office.com/Pages/ResponsePage.aspx?id=G1KQ9WX6qEqaVTQ3DOZpUHLzzfu_kEJBvBxw3qIlFUZURDlBTzVJSzlHWklENlBUSVZDR1pJUUM2VS4u&embed=true"
-                frameborder="0" scrolling="auto" style=" border: #0078d4 2px solid; max-width:100%; max-height:100%">
-                <div class="alert alert-info alert-dismissible fade show">
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    <strong>重要信息!</strong>一些旧的浏览器不支持嵌入框架.你可以尝试独立打开框架中的内容。<a class="btn btn-outline-secondary btn-sm"
-                        href="https://forms.office.com/Pages/ResponsePage.aspx?id=G1KQ9WX6qEqaVTQ3DOZpUHLzzfu_kEJBvBxw3qIlFUZURDlBTzVJSzlHWklENlBUSVZDR1pJUUM2VS4u&embed=true">独立打开框架中的内容
-                        &raquo;</a>
+            <br>
+            步骤：
+            <!-- Nav pills -->
+            <ul class="nav nav-pills" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="pill" href="#home">1.预览利息</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#menu1">&raquo; 2.提交申请</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#menu2">&raquo; 3.等待审核</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div id="home" class="container tab-pane active"><br>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" id="jz1" style="width:1%"></div>
+                    </div><br>
+                    <form action="">
+                        <div class="row">
+                            <div class="col">
+                                <label for="dkts" class="form-label">预计贷款天数(1-180):</label>
+                                <div class="input-group">
+                                    <input type="number" id="dkts" name="dkts" min="1" max="180">
+                                    <span class="input-group-text">天</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="rll" class="form-label">约定日利率(0.1014-154):</label>
+                                <div class="input-group">
+                                    <input type="number" id="rll" name="rll" min="0.1014" max="154">
+                                    <span class="input-group-text">‰</span>
+                                </div>
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <label for="bj" class="form-label">本金:</label>
+                            <div class="input-group">
+                                <input type="number" id="bj" name="bj" min="0.01" max="10000">
+                                <span class="input-group-text">元</span>
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col">
+                                <input type="button" value="计算" onclick="calc()">
+                            </div><br>
+                        </div><br>
+                        <div class="row">
+                            <P>预览结果：</P>
+                            <div class="col">
+                                <label for="bx" class="form-label">本息:</label>
+                                <div class="input-group">
+                                    <input type="text" id="bx" name="bx" readonly>
+                                    <span class="input-group-text">元</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="lx" class="form-label">利息:</label>
+                                <div class="input-group">
+                                    <input type="text" id="lx" name="lx" readonly>
+                                    <span class="input-group-text">元</span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <script type="text/javascript">
+                        function calc() {
+                            var dkts = document.getElementById("dkts");
+                            var rll = document.getElementById("rll");
+                            var bj = document.getElementById("bj");
+                            var bx;
+                            var lx;
+                            var a = 1 + change(rll.value) * 0.001;
+                            var c = Math.pow(a, change(dkts.value))
+                            bx = (change(bj.value) * c).toFixed(2);
+                            lx = (bx - change(bj.value)).toFixed(2);
+                            document.getElementById("bx").value = bx;
+                            document.getElementById("lx").value = lx;
+							document.getElementById("jz1").style="width:33%";
+                        }
+                        function change(x) {
+                            return parseFloat(x);
+                        }
+                    </script>
                 </div>
-            </iframe>
-            <script>
-                function changeFrameHeight() {
-                    var ifm = document.getElementById("mainiframe");
-                    ifm.height = document.documentElement.clientHeight - 200;
-                }
-                window.onresize = function () { changeFrameHeight(); }
-                $(function () { changeFrameHeight(); });
-            </script>
-            <script>
-                function changeFrameHeight() {
-                    var ifm = document.getElementById("mainiframe");
-                    ifm.height = document.documentElement.clientHeight - 200;
-                }
-                window.onload = function () { changeFrameHeight(); }
-                $(function () { changeFrameHeight(); });
-            </script>
+                <div id="menu1" class="container tab-pane fade"><br>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:66%"></div>
+                    </div><br>
+                    <iframe id="mainiframe" width="1920" height="1080"
+                        src="https://forms.office.com/Pages/ResponsePage.aspx?id=G1KQ9WX6qEqaVTQ3DOZpUHLzzfu_kEJBvBxw3qIlFUZURDlBTzVJSzlHWklENlBUSVZDR1pJUUM2VS4u&embed=true"
+                        frameborder="0" scrolling="auto"
+                        style=" border: #0078d4 2px solid; max-width:100%; max-height:100%">
+                        <div class="alert alert-info alert-dismissible fade show">
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            <strong>重要信息!</strong>一些旧的浏览器不支持嵌入框架.你可以尝试独立打开框架中的内容。<a
+                                class="btn btn-outline-secondary btn-sm"
+                                href="https://forms.office.com/Pages/ResponsePage.aspx?id=G1KQ9WX6qEqaVTQ3DOZpUHLzzfu_kEJBvBxw3qIlFUZURDlBTzVJSzlHWklENlBUSVZDR1pJUUM2VS4u&embed=true">独立打开框架中的内容
+                                &raquo;</a>
+                        </div>
+                    </iframe>
+                    <script>
+                        function changeFrameHeight() {
+                            var ifm = document.getElementById("mainiframe");
+                            ifm.height = document.documentElement.clientHeight - 200;
+                        }
+                        window.onresize = function () { changeFrameHeight(); }
+                        $(function () { changeFrameHeight(); });
+                    </script>
+                    <script>
+                        function changeFrameHeight() {
+                            var ifm = document.getElementById("mainiframe");
+                            ifm.height = document.documentElement.clientHeight - 200;
+                        }
+                        window.onload = function () { changeFrameHeight(); }
+                        $(function () { changeFrameHeight(); });
+                    </script>
+                </div>
+                <div id="menu2" class="container tab-pane fade"><br>
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                            style="width:100%"></div>
+                    </div><br>
+                    <h1 class="display-1"><strong>你的申请已提交。请等待审核。</strong></h1><br>
+                    <p>如果您的申请表审核通过，LYKNS 的工作人员将会在<mark><strong>3个工作日内</strong></mark>通过您预留的信息联系您。<br><br>
+                    </p>
+                    <p class="text-danger"><strong>还款日期前，不会有 LYKNS
+                            的工作人员以任何理由要求您汇款，谨防电信诈骗。<br><br>请及时还款，还款时请以放款方式向原放款帐户打款。若逾期未还款，您的违约信息将会录入CaptB关系人档案数据库，可能会影响您办理其他业务。</strong>
+                    </p>
+
+                </div>
+            </div>
         </main>
     </div>
 
