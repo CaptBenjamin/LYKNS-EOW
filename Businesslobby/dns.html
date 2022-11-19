@@ -46,6 +46,7 @@
             }
 
         }
+
         a {
             text-decoration: none
         }
@@ -440,8 +441,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand text-primary" herf="https://eow.lykns.tk/"><img
-                        src="/p/logo.webp" /></a>
+                <a class="navbar-brand text-primary" herf="https://eow.lykns.tk/"><img src="/p/logo.webp" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -493,36 +493,188 @@
         <main role="main" class="pb-3">
             <noscript>
                 <div class="alert alert-danger">
-                    <strong>错误!</strong> 您没有启用或您的浏览器不支持 JavaScript，LYKNS可能不能正常运行。请开启 JavaScript 或换用支持 JavaScript 的浏览器以继续。
+                    <strong>错误!</strong> 您没有启用或您的浏览器不支持 JavaScript，LYKNS可能不能正常运行。请开启 JavaScript 或换用支持 JavaScript
+                    的浏览器以继续。
                 </div>
             </noscript>
             <h1 class="text-primary">DNS 注册</h1>
-            <iframe id="mainiframe" width="100%" height="100"
-                src="https://forms.office.com/Pages/ResponsePage.aspx?id=G1KQ9WX6qEqaVTQ3DOZpUHLzzfu_kEJBvBxw3qIlFUZUNFJKTUg4WU9YWUtHU0hXVUhXR1BGMVNPRS4u"
-                frameborder="0" scrolling="auto"
-                style=" border: #0078d4 2px solid; max-width:100%; max-height:100%">
-                <div class="alert alert-info alert-dismissible fade show">
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    <strong>重要信息!</strong>一些旧的浏览器不支持嵌入框架.你可以尝试独立打开框架中的内容。<a class="btn btn-outline-secondary btn-sm"
-                        href="https://forms.office.com/Pages/ResponsePage.aspx?id=G1KQ9WX6qEqaVTQ3DOZpUHLzzfu_kEJBvBxw3qIlFUZUNFJKTUg4WU9YWUtHU0hXVUhXR1BGMVNPRS4u">独立打开框架中的内容
-                        &raquo;</a>
-                </div></iframe>
-            <script>
-                function changeFrameHeight() {
-                    var ifm = document.getElementById("mainiframe");
-                    ifm.height = document.documentElement.clientHeight - 200;
-                }
-                window.onresize = function () { changeFrameHeight(); }
-                $(function () { changeFrameHeight(); });
-            </script>
-            <script>
-                function changeFrameHeight() {
-                    var ifm = document.getElementById("mainiframe");
-                    ifm.height = document.documentElement.clientHeight - 200;
-                }
-                window.onload = function () { changeFrameHeight(); }
-                $(function () { changeFrameHeight(); });
-            </script>
+            步骤：
+            <!-- Nav pills -->
+            <ul class="nav nav-pills" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="pill" href="#home">1.预览费用</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#menu1">&raquo; 2.提交申请</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#menu2">&raquo; 3.等待审核</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div id="home" class="container tab-pane active"><br>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" id="jz1" style="width:1%">
+                        </div>
+                    </div><br>
+                    <form action="" class="was-validated">
+                        <fieldset>
+                            <legend>基础信息</legend>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="zcyms">注册域名数量</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="zcyms" name="zcyms" min="1"
+                                            required>
+                                        <span class="input-group-text">个</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="zcsc">注册时长</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="zcsc" name="zcsc" min="1" max="6"
+                                            required>
+                                        <span class="input-group-text">月</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset><br>
+                        <fieldset>
+                            <legend>增值服务</legend>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="zx">咨询服务</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="zx" name="zx" min="0" required>
+                                        <span class="input-group-text">次</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="yc">远程支持</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="yc" name="yc" min="0" required>
+                                        <span class="input-group-text">次</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="tg">站点托管</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="tg" name="tg" min="0" required>
+                                        <span class="input-group-text">月</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset><br>
+                        <div class="row">
+                            <div class="col">
+                                <input type="button" value="计算" onclick="calc()">
+                            </div><br>
+                        </div><br>
+                        <fieldset>
+                            <legend>预览结果</legend>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-floating input-group">
+                                        <input type="text" class="form-control" id="zxf" name="zxf" placeholder="咨询服务费"
+                                            disabled>
+                                        <span class="input-group-text">元</span>
+                                        <label for="zxf">咨询服务费</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-floating input-group">
+                                        <input type="text" class="form-control" id="ycf" name="ycf"
+                                            placeholder="远程支持服务费" disabled>
+                                        <span class="input-group-text">元</span>
+                                        <label for="ycf">远程支持服务费</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-floating input-group">
+                                        <input type="text" class="form-control" id="tgf" name="tgf" placeholder="站点托管费"
+                                            disabled>
+                                        <span class="input-group-text">元</span>
+                                        <label for="tgf">站点托管费</label>
+                                    </div>
+                                </div>
+                            </div><br>
+                            <div class="form-floating input-group">
+                                <input type="text" class="form-control" id="zj" name="zj" placeholder="总计金额" disabled>
+                                <span class="input-group-text">元</span>
+                                <label for="zj">总计金额</label>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <script type="text/javascript">
+                        function calc() {
+                            var zcyms = document.getElementById("zcyms");
+                            var zcsc = document.getElementById("zcsc");
+                            var zx = document.getElementById("zx");
+                            var yc = document.getElementById("yc");
+                            var tg = document.getElementById("tg");
+                            var zxf = change(zx.value);
+                            var ycf = change(yc.value) * 5;
+                            var tgf = change(tg.value) * 5 * change(zcyms.value);
+                            var zj;
+                            zj = change(zcyms.value) * change(zcsc.value) + zxf + ycf + tgf;
+                            document.getElementById("zxf").value = zxf;
+                            document.getElementById("ycf").value = ycf;
+                            document.getElementById("tgf").value = tgf;
+                            document.getElementById("zj").value = zj;
+                            document.getElementById("jz1").style = "width:33%";
+                        }
+                        function change(x) {
+                            return parseFloat(x);
+                        }
+                    </script>
+                </div>
+                <div id="menu1" class="container tab-pane fade"><br>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:66%"></div>
+                    </div><br>
+                    <iframe id="mainiframe" width="1920" height="1080"
+                        src="https://forms.office.com/Pages/ResponsePage.aspx?id=G1KQ9WX6qEqaVTQ3DOZpUHLzzfu_kEJBvBxw3qIlFUZUNFJKTUg4WU9YWUtHU0hXVUhXR1BGMVNPRS4u"
+                        frameborder="0" scrolling="auto"
+                        style=" border: #0078d4 2px solid; max-width:100%; max-height:100%">
+                        <div class="alert alert-info alert-dismissible fade show">
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            <strong>重要信息!</strong>一些旧的浏览器不支持嵌入框架.你可以尝试独立打开框架中的内容。<a
+                                class="btn btn-outline-secondary btn-sm"
+                                href="https://forms.office.com/Pages/ResponsePage.aspx?id=G1KQ9WX6qEqaVTQ3DOZpUHLzzfu_kEJBvBxw3qIlFUZUNFJKTUg4WU9YWUtHU0hXVUhXR1BGMVNPRS4u">独立打开框架中的内容
+                                &raquo;</a>
+                        </div>
+                    </iframe>
+                    <script>
+                        function changeFrameHeight() {
+                            var ifm = document.getElementById("mainiframe");
+                            ifm.height = document.documentElement.clientHeight - 330;
+                        }
+                        window.onresize = function () { changeFrameHeight(); }
+                        $(function () { changeFrameHeight(); });
+                    </script>
+                    <script>
+                        function changeFrameHeight() {
+                            var ifm = document.getElementById("mainiframe");
+                            ifm.height = document.documentElement.clientHeight - 330;
+                        }
+                        window.onload = function () { changeFrameHeight(); }
+                        $(function () { changeFrameHeight(); });
+                    </script>
+                </div>
+                <div id="menu2" class="container tab-pane fade"><br>
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                            style="width:100%"></div>
+                    </div><br>
+                    <h1 class="display-1"><strong>你的申请已提交。请等待审核。</strong></h1><br>
+                    <p>如果您的申请表审核通过，LYKNS 的工作人员将会在<mark><strong>3个工作日内</strong></mark>通过您预留的信息联系您。<br><br>
+                    </p>
+                    <p class="text-danger"><strong>在审核通过之前，不会有 LYKNS 的工作人员以任何理由要求您汇款，谨防电信诈骗。</strong>
+                    </p>
+                </div>
+            </div>
         </main>
     </div>
 

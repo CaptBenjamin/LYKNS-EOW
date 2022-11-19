@@ -516,54 +516,65 @@
             <div class="tab-content">
                 <div id="home" class="container tab-pane active"><br>
                     <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" id="jz1" style="width:1%"></div>
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" id="jz1" style="width:1%">
+                        </div>
                     </div><br>
-                    <form action="">
-                        <div class="row">
-                            <div class="col">
-                                <label for="dkts" class="form-label">预计贷款天数(1-180):</label>
-                                <div class="input-group">
-                                    <input type="number" id="dkts" name="dkts" min="1" max="180">
-                                    <span class="input-group-text">天</span>
+                    <form action="" class="was-validated">
+                        <fieldset>
+                            <legend>预览结果</legend>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="dkts" class="form-label">预计贷款天数</label>
+                                    <div class="input-group">
+                                        <input class="form-control" type="number" id="dkts" name="dkts" min="1"
+                                            max="180" required>
+                                        <span class="input-group-text">天</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col">
-                                <label for="rll" class="form-label">约定日利率(0.1014-154):</label>
-                                <div class="input-group">
-                                    <input type="number" id="rll" name="rll" min="0.1014" max="154">
-                                    <span class="input-group-text">‰</span>
+                                <div class="col">
+                                    <label for="rll" class="form-label">约定日利率</label>
+                                    <div class="input-group">
+                                        <input class="form-control" type="number" id="rll" name="rll" min="0.1014"
+                                            max="154" required>
+                                        <span class="input-group-text">‰</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </div><br>
-                        <div class="row">
-                            <label for="bj" class="form-label">本金:</label>
-                            <div class="input-group">
-                                <input type="number" id="bj" name="bj" min="0.01" max="10000">
-                                <span class="input-group-text">元</span>
-                            </div>
-                        </div><br>
+                            </div><br>
+                            <div class="row">
+                                <label for="bj" class="form-label">本金</label>
+                                <div class="input-group">
+                                    <input class="form-control" type="number" id="bj" name="bj" min="0.01" max="10000"
+                                        required>
+                                    <span class="input-group-text">元</span>
+                                </div>
+                            </div><br>
+                        </fieldset>
                         <div class="row">
                             <div class="col">
                                 <input type="button" value="计算" onclick="calc()">
                             </div><br>
                         </div><br>
-                        <div class="row">
-                            <P>预览结果：</P>
-                            <div class="col">
-                                <label for="bx" class="form-label">本息:</label>
-                                <div class="input-group">
-                                    <input type="text" id="bx" name="bx" readonly>
-                                    <span class="input-group-text">元</span>
+                        <fieldset>
+                            <legend>预览结果</legend>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-floating input-group">
+                                        <input type="text" class="form-control" id="bx" name="bx" placeholder="本息"
+                                            disabled>
+                                        <span class="input-group-text">元</span>
+                                        <label for="bx">本息</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-floating input-group">
+                                        <input type="text" class="form-control" id="lx" name="lx" placeholder="利息"
+                                            disabled>
+                                        <span class="input-group-text">元</span>
+                                        <label for="lx">利息</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col">
-                                <label for="lx" class="form-label">利息:</label>
-                                <div class="input-group">
-                                    <input type="text" id="lx" name="lx" readonly>
-                                    <span class="input-group-text">元</span>
-                                </div>
-                            </div>
-                        </div>
+                        </fieldset>
                     </form>
                     <script type="text/javascript">
                         function calc() {
@@ -578,7 +589,7 @@
                             lx = (bx - change(bj.value)).toFixed(2);
                             document.getElementById("bx").value = bx;
                             document.getElementById("lx").value = lx;
-							document.getElementById("jz1").style="width:33%";
+                            document.getElementById("jz1").style = "width:33%";
                         }
                         function change(x) {
                             return parseFloat(x);

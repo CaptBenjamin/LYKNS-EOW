@@ -519,45 +519,54 @@
                         <div class="progress-bar progress-bar-striped progress-bar-animated" id="jz1" style="width:1%">
                         </div>
                     </div><br>
-                    <form action="">
-                        <div class="row">
-                            <div class="col">
-                                <label for="dhje" class="form-label">兑换金额:</label>
-                                <div class="input-group">
-                                    <input type="number" id="dhje" name="dhje" min="1">
-                                    <span class="input-group-text">元</span>
+                    <form action="" class="was-validated">
+                        <fieldset>
+                            <legend>基础信息</legend>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="dhje">兑换金额</label>
+                                    <div class="input-group">
+                                        <input class="form-control" type="number" id="dhje" name="dhje" min="1"
+                                            required>
+                                        <span class="input-group-text">元</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col">
-                                <label for="sxfl" class="form-label">约定手续费率(0.1-15.4):</label>
-                                <div class="input-group">
-                                    <input type="number" id="sxfl" name="sxfl" min="0.1" max="15.4">
-                                    <span class="input-group-text">％</span>
+                                <div class="col">
+                                    <label for="sxfl">约定手续费率</label>
+                                    <div class="input-group">
+                                        <input class="form-control" type="number" id="sxfl" name="sxfl" min="0.1"
+                                            max="15.4" required>
+                                        <span class="input-group-text">％</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </div><br>
+                            </div><br>
+                        </fieldset>
                         <div class="row">
                             <div class="col">
                                 <input type="button" value="计算" onclick="calc()">
                             </div><br>
                         </div><br>
-                        <div class="row">
-                            <P>预览结果：</P>
-                            <div class="col">
-                                <label for="zj" class="form-label">总计金额:</label>
-                                <div class="input-group">
-                                    <input type="text" id="zj" name="zj" readonly>
-                                    <span class="input-group-text">元</span>
+                        <fieldset>
+                            <legend>预览结果</legend>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-floating input-group">
+                                        <input type="text" class="form-control" id="zj" name="zj" placeholder="总计金额"
+                                            disabled>
+                                        <span class="input-group-text">元</span>
+                                        <label for="zj">总计金额</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-floating input-group">
+                                        <input type="text" class="form-control" id="sxf" name="sxf" placeholder="手续费"
+                                            disabled>
+                                        <span class="input-group-text">元</span>
+                                        <label for="sxf">手续费</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col">
-                                <label for="sxf" class="form-label">手续费:</label>
-                                <div class="input-group">
-                                    <input type="text" id="sxf" name="sxf" readonly>
-                                    <span class="input-group-text">元</span>
-                                </div>
-                            </div>
-                        </div>
+                        </fieldset>
                     </form>
                     <script type="text/javascript">
                         function calc() {
@@ -595,7 +604,7 @@
                     <script>
                         function changeFrameHeight() {
                             var ifm = document.getElementById("mainiframe");
-                            ifm.height = document.documentElement.clientHeight - 200;
+                            ifm.height = document.documentElement.clientHeight - 330;
                         }
                         window.onresize = function () { changeFrameHeight(); }
                         $(function () { changeFrameHeight(); });
@@ -603,7 +612,7 @@
                     <script>
                         function changeFrameHeight() {
                             var ifm = document.getElementById("mainiframe");
-                            ifm.height = document.documentElement.clientHeight - 200;
+                            ifm.height = document.documentElement.clientHeight - 330;
                         }
                         window.onload = function () { changeFrameHeight(); }
                         $(function () { changeFrameHeight(); });
